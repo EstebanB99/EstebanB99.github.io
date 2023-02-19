@@ -1,6 +1,6 @@
 @charset "UTF-8";
 .u-hidden-block {
-  visibility: hidden!important;
+  visibility: hidden!im'p'ortant;
 }
 .u-locked-block {
   pointer-events: none!important;
@@ -24839,6 +24839,9 @@ h6 {
 .u-image,
 .u-gradient {
   color: #111111;
+}
+.u-parallax {
+  background-attachment: fixed;
 }
 .u-shading,
 .u-overlap.u-overlap-contrast .u-header {

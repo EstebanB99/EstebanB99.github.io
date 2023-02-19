@@ -823,7 +823,7 @@
 .u-container-layout.hover .u-section-2 .u-map-1 {
   transform: rotate(0deg) scale(1) translateX(0px) translateY(0px) !important;
 } .u-section-3 {
-  background-image: none;
+  background-image: linear-gradient(0deg, rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url("images/Pan_Art1.png");
 }
 
 .u-section-3 .u-sheet-1 {
@@ -832,42 +832,33 @@
 
 .u-section-3 .u-text-1 {
   letter-spacing: 30px;
-  text-shadow: 2px 2px 13px rgba(0,0,0,0.95);
+  text-shadow: 2px 2px 19px rgba(0,0,0,0.9);
   margin: 94px 343px 0 auto;
 }
 
-.u-section-3 .u-layout-wrap-1 {
-  width: 579px;
-  margin: 78px auto 46px;
-}
-
-.u-section-3 .u-layout-cell-1 {
-  min-height: 515px;
-}
-
-.u-section-3 .u-container-layout-1 {
-  padding: 0;
+.u-section-3 .u-icon-1 {
+  font-size: 1.4584em;
+  vertical-align: -6px;
+  padding: 8px;
 }
 
 .u-section-3 .u-custom-html-1 {
-  height: auto;
-  min-height: 507px;
-  background-image: none;
-  width: 564px;
-  margin: -9px -10px -17px;
+  margin-top: 107px;
+  margin-bottom: 0;
+}
+
+.u-section-3 .u-custom-html-2 {
+  margin-top: 107px;
+  margin-bottom: 60px;
 }
 
 @media (max-width: 1199px) {
-  .u-section-3 .u-sheet-1 {
-    min-height: 1336px;
+   .u-section-3 {
+    background-position: 50% 50%;
   }
 
   .u-section-3 .u-text-1 {
     margin-right: 283px;
-  }
-
-  .u-section-3 .u-layout-cell-1 {
-    min-height: 500px;
   }
 }
 
@@ -875,64 +866,20 @@
   .u-section-3 .u-text-1 {
     margin-right: 217px;
   }
-
-  .u-section-3 .u-container-layout-1 {
-    padding-left: 30px;
-    padding-right: 30px;
-  }
 }
 
 @media (max-width: 767px) {
-  .u-section-3 .u-sheet-1 {
-    min-height: 1301px;
-  }
-
   .u-section-3 .u-text-1 {
     margin-right: 163px;
-  }
-
-  .u-section-3 .u-layout-wrap-1 {
-    width: 540px;
-  }
-
-  .u-section-3 .u-container-layout-1 {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  .u-section-3 .u-custom-html-1 {
-    width: 540px;
-    margin-left: 0;
-    margin-right: 0;
   }
 }
 
 @media (max-width: 575px) {
-  .u-section-3 .u-sheet-1 {
-    min-height: 602px;
-  }
-
   .u-section-3 .u-text-1 {
     width: auto;
     margin-top: 88px;
     margin-right: -25px;
     margin-left: 25px;
-  }
-
-  .u-section-3 .u-layout-wrap-1 {
-    width: 353px;
-    margin-top: 55px;
-    margin-right: -12px;
-    margin-bottom: 41px;
-  }
-
-  .u-section-3 .u-layout-cell-1 {
-    min-height: 378px;
-  }
-
-  .u-section-3 .u-custom-html-1 {
-    width: 340px;
-    margin: 0 -17px -156px 1px;
   }
 }reviews {
   width: 800px;
