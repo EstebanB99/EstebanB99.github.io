@@ -1,6 +1,6 @@
 @charset "UTF-8";
 .u-hidden-block {
-  visibility: hidden!im'p'ortant;
+  visibility: hidden!important;
 }
 .u-locked-block {
   pointer-events: none!important;
@@ -24840,9 +24840,6 @@ h6 {
 .u-gradient {
   color: #111111;
 }
-.u-parallax {
-  background-attachment: fixed;
-}
 .u-shading,
 .u-overlap.u-overlap-contrast .u-header {
   color: #ffffff;
@@ -40795,7 +40792,24 @@ a.u-link.u-text-hover-grey-90:hover {
   }
 }
 
+@media (max-width: 575px) {
+  .u-header .u-sheet-1 {
+    min-height: 92px;
+  }
 
+  .u-header .u-image-1 {
+    width: 106px;
+    height: 50px;
+    margin-top: 21px;
+    margin-left: 0;
+  }
+
+  .u-header .u-menu-1 {
+    margin-top: -41px;
+    margin-right: -22px;
+    margin-bottom: 30px;
+  }
+}
 .u-block-5a5b-8:not([data-block-selected]):not([data-cell-selected]), .u-block-5a5b-8:not([data-block-selected]):not([data-cell-selected]):before, .u-block-5a5b-8:not([data-block-selected]):not([data-cell-selected]) > .u-container-layout:before {
     transition-property: fill, color, background-color, stroke-width, border-style, border-width, border-top-width, border-left-width, border-right-width, border-bottom-width, custom-border, borders, box-shadow, text-shadow, opacity, border-radius, stroke, border-color, font-size, font-style, font-weight, text-decoration, letter-spacing, transform, background-image, image-zoom, background-size, background-position
 }
@@ -40842,32 +40856,52 @@ a.u-link.u-text-hover-grey-90:hover {
   min-height: 120px;
 }
 
+.u-footer .u-social-icons-1 {
+  height: 46px;
+  min-height: 16px;
+  width: 157px;
+  min-width: 68px;
+  margin: 37px auto 0;
+}
+
+.u-footer .u-icon-1 {
+  height: 100%;
+}
+
+.u-footer .u-icon-2 {
+  height: 100%;
+}
+
+.u-footer .u-icon-3 {
+  height: 100%;
+}
+
 .u-footer .u-text-1 {
+  font-size: 0.625rem;
   width: 417px;
-  margin: 49px auto;
+  margin: 12px auto 9px;
 }
 @media (max-width: 1199px) {
-  .u-footer .u-sheet-1 {
-    min-height: 99px;
+  .u-footer .u-social-icons-1 {
+    width: 157px;
   }
 }
-@media (max-width: 991px) {
-  .u-footer .u-sheet-1 {
-    min-height: 76px;
-  }
-}
-@media (max-width: 767px) {
-  .u-footer .u-sheet-1 {
-    min-height: 57px;
-  }
-}
+
+
 @media (max-width: 575px) {
   .u-footer .u-sheet-1 {
-    min-height: 36px;
+    min-height: 67px;
+  }
+
+  .u-footer .u-social-icons-1 {
+    height: 35px;
+    width: 126px;
+    margin-top: 16px;
   }
 
   .u-footer .u-text-1 {
-    width: 340px;
+    width: auto;
+    margin: 0;
   }
 }
 
