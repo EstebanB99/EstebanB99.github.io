@@ -1,0 +1,34 @@
+.traffic-widget {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  
+  .traffic-header {
+    text-align: center;
+  }
+  
+  .traffic-title {
+    margin: 0;
+  }
+  
+  .traffic-day {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  
+  .day-title {
+    margin: 0;
+  }
+  
+  .day-data {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .day-visitors {
+    font-weight: bold;
+    margin: 0;
+  }
+  

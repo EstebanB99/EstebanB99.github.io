@@ -1,106 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html>
+  <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+    <title>Traffic Widget</title>
+    <link rel="stylesheet" href="test.css">
+  </head>
+  <body>
     <div class="traffic-widget">
-        <div class="traffic-header">
-          <h2>Daily Traffic</h2>
-          <div class="traffic-navigation">
-            <button id="prev-day-btn">&lt;</button>
-            <span id="current-day"></span>
-            <button id="next-day-btn">&gt;</button>
+      <div class="traffic-header">
+        <h2 class="traffic-title">Weekly Traffic Data</h2>
+      </div>
+      <div class="traffic-body">
+        <div class="traffic-day" id="day-1">
+          <h3 class="day-title">Monday</h3>
+          <div class="day-data">
+            <p class="day-visitors">Loading...</p>
           </div>
         </div>
-        <div class="traffic-chart"></div>
+        <div class="traffic-day" id="day-2">
+          <h3 class="day-title">Tuesday</h3>
+          <div class="day-data">
+            <p class="day-visitors">Loading...</p>
+          </div>
+        </div>
+        <div class="traffic-day" id="day-3">
+          <h3 class="day-title">Wednesday</h3>
+          <div class="day-data">
+            <p class="day-visitors">Loading...</p>
+          </div>
+        </div>
+        <div class="traffic-day" id="day-4">
+          <h3 class="day-title">Thursday</h3>
+          <div class="day-data">
+            <p class="day-visitors">Loading...</p>
+          </div>
+        </div>
+        <div class="traffic-day" id="day-5">
+          <h3 class="day-title">Friday</h3>
+          <div class="day-data">
+            <p class="day-visitors">Loading...</p>
+          </div>
+        </div>
+        <div class="traffic-day" id="day-6">
+          <h3 class="day-title">Saturday</h3>
+          <div class="day-data">
+            <p class="day-visitors">Loading...</p>
+          </div>
+        </div>
+        <div class="traffic-day" id="day-7">
+          <h3 class="day-title">Sunday</h3>
+          <div class="day-data">
+            <p class="day-visitors">Loading...</p>
+          </div>
+        </div>
       </div>
-      
-      <script>
-        function getTrafficData(day) {
-          fetch(`https://besttime.app/api/v1/query/details?venue_id=ven_4d5837623267303351715552675962664451356e3463474a496843&api_key_public=pub_d957728c72404daab33fe681059acaad&day=${day}`)
-            .then(response => response.json())
-            .then(data => {
-              // Display the data in a chart
-              const chartData = data.chartData;
-              const chartContainer = document.querySelector('.traffic-chart');
-              chartContainer.innerHTML = '';
-              const chart = new Chart(chartContainer, {
-                type: 'line',
-                data: {
-                  labels: chartData.labels,
-                  datasets: [{
-                    label: 'Visitors',
-                    data: chartData.data,
-                    fill: false,
-                    borderColor: '#007bff',
-                    tension: 0.1
-                  }]
-                }
-              });
-      
-              // Update the current day in the navigation
-              const currentDayEl = document.querySelector('#current-day');
-              currentDayEl.textContent = data.currentDay;
-            })
-            .catch(error => console.error(error));
-        }
-      
-        let currentDay = new Date().toISOString().substr(0, 10); // Today's date
-        const prevDayBtn = document.querySelector('#prev-day-btn');
-        const nextDayBtn = document.querySelector('#next-day-btn');
-      
-        prevDayBtn.addEventListener('click', () => {
-          currentDay = new Date(new Date(currentDay).setDate(new Date(currentDay).getDate() - 1)).toISOString().substr(0, 10);
-          getTrafficData(currentDay);
-        });
-      
-        nextDayBtn.addEventListener('click', () => {
-          currentDay = new Date(new Date(currentDay).setDate(new Date(currentDay).getDate() + 1)).toISOString().substr(0, 10);
-          getTrafficData(currentDay);
-        });
-      
-        getTrafficData(currentDay);
-      </script>
-      
-      <style>
-        .traffic-widget {
-          width: 500px;
-          height: 500px;
-          background-color: #f2f2f2;
-          border: 1px solid #ccc;
-          padding: 10px;
-          box-sizing: border-box;
-          font-family: Arial, sans-serif;
-        }
-      
-        .traffic-header {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          margin-bottom: 10px;
-        }
-      
-        .traffic-navigation {
-          display: flex;
-          align-items: center;
-        }
-      
-        .traffic-navigation button {
-          border: none;
-          background-color: transparent;
-          font-size: 20px;
-          color: #007bff;
-          cursor: pointer;
-        }
-      
-        .traffic-chart canvas {
-          width: 100%;
-          height: 100%;
-        }
-      </style>
-</body>
+    </div>
+    <script src="test.js"></script>
+  </body>
 </html>
